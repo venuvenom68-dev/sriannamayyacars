@@ -1,0 +1,66 @@
+[
+  {
+    "name": "Maruti Suzuki",
+    "slug": "suzuki"
+  },
+  {
+    "name": "Hyundai",
+    "slug": "hyundai"
+  },
+  {
+    "name": "Tata",
+    "slug": "tata"
+  },
+  {
+    "name": "Mahindra",
+    "slug": "mahindra"
+  },
+  {
+    "name": "Toyota",
+    "slug": "toyota"
+  },
+  {
+    "name": "Honda",
+    "slug": "honda"
+  },
+  {
+    "name": "Kia",
+    "slug": "kia"
+  },
+  {
+    "name": "Renault",
+    "slug": "renault"
+  },
+  {
+    "name": "Nissan",
+    "slug": "nissan"
+  },
+  {
+    "name": "Volkswagen",
+    "slug": "volkswagen"
+  },
+  {
+    "name": "Skoda",
+    "slug": "skoda"
+  },
+  {
+    "name": "Ford",
+    "slug": "ford"
+  },
+  {
+    "name": "MG",
+    "slug": "mg"
+  },
+  {
+    "name": "BMW",
+    "slug": "bmw"
+  },
+  {
+    "name": "Mercedes-Benz",
+    "slug": null
+  },
+  {
+    "name": "Audi",
+    "slug": "audi"
+  }
+]

@@ -1,0 +1,26 @@
+# ── Dependencies ──────────────────────────────────────────────
+node_modules/
+**/node_modules/
+
+# ── Secrets (NEVER commit) ────────────────────────────────────
+.env
+.env.*
+!.env.example
+**/.env
+**/.env.*
+!**/.env.example
+
+# ── Next.js build output ──────────────────────────────────────
+.next/
+**/.next/
+out/
+**/out/
+
+# ── Uploaded car photos (kept on the server, not in git) ──────
+be/uploads/*
+!be/uploads/.gitkeep
+
+# ── Packaging / misc ──────────────────────────────────────────
+annamayya-backend.zip
+*.log
+.DS_Store
