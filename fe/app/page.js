@@ -3,7 +3,7 @@ import { useEffect, useMemo, useState } from "react";
 import Preloader from "@/components/Preloader";
 import CarModal from "@/components/CarModal";
 import WaChooser from "@/components/WaChooser";
-import { getCars, rupee, PHONE, PHONE_DISPLAY, ADMIN_URL } from "@/lib/api";
+import { getCars, rupee, PHONE, PHONE_DISPLAY } from "@/lib/api";
 import { CAR_BRANDS, FUEL_TYPES } from "@/lib/brands";
 
 const WA_MSG = "Hi Sri Annamayya Cars, I'm interested in your used cars. Please share the available cars and details.";
@@ -565,7 +565,7 @@ export default function Home() {
           <div className="foot-bottom">
             <span>© {new Date().getFullYear()} Sri Annamayya Cars. All Rights Reserved.</span>
             <span>All types of cars — selling &amp; buying · Madanapalle</span>
-            <a href={ADMIN_URL} className="owner-login" rel="nofollow">Owner Login</a>
+            <a href="/admin" className="owner-login" rel="nofollow">Owner Login</a>
           </div>
         </div>
       </footer>
