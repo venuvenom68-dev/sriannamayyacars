@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sri Annamayya Cars — Quality Pre-Owned Cars in Madanapalle</title>
+  <meta name="description" content="Sri Annamayya Cars — all types of quality pre-owned cars bought and sold in Madanapalle, Annamayya District, A.P. Verified papers, honest pricing, park & sale facility." />
+  <link rel="icon" href="assets/favicon.png" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Preloader -->
+  <div class="pre" id="pre" aria-hidden="true">
+    <div style="text-align:center">
+      <div class="pre-logo"><img src="assets/logo.png" alt="Sri Annamayya Cars" /><span class="sheen"></span></div>
+      <div class="pre-bar"><i></i></div>
+    </div>
+  </div>
+
+  <div class="page-enter" id="page">
+    <!-- Header -->
+    <header class="hd" id="hd">
+      <div class="wrap">
+        <a href="#top" class="brand" aria-label="Sri Annamayya Cars"><img src="assets/logo.png" alt="Sri Annamayya Cars" /></a>
+        <nav class="nav">
+          <a href="#inventory">Cars</a>
+          <a href="#sell">Sell Car</a>
+          <a href="#why">Why Us</a>
+          <a href="#showroom">Showroom</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <div class="hd-cta">
+          <a class="btn btn-line" href="tel:+919441775216">Call <span>94417 75216</span></a>
+          <button class="btn btn-wa" data-wa>WhatsApp</button>
+        </div>
+        <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </header>
+
+    <!-- Mobile drawer -->
+    <div class="drawer-scrim" id="scrim"></div>
+    <aside class="drawer" id="drawer">
+      <div class="d-head">
+        <img src="assets/logo.png" alt="Sri Annamayya Cars" />
+        <button class="dx" id="drawerX" aria-label="Close menu">✕</button>
+      </div>
+      <a class="d-link" href="#inventory">Cars</a>
+      <a class="d-link" href="#sell">Sell Car</a>
+      <a class="d-link" href="#why">Why Us</a>
+      <a class="d-link" href="#showroom">Showroom</a>
+      <a class="d-link" href="#contact">Contact</a>
+      <div class="d-cta">
+        <a class="btn btn-line btn-block" href="tel:+919441775216">Call 94417 75216</a>
+        <button class="btn btn-wa btn-block" data-wa>WhatsApp Us</button>
+      </div>
+    </aside>
+
+    <!-- Hero -->
+    <section class="hero" id="top">
+      <div class="hero-bg"><img src="assets/hero.jpg" alt="" aria-hidden="true" /></div>
+      <div class="wrap">
+        <div class="eyebrow">Madanapalle · Annamayya District · A.P.</div>
+        <h1>Quality pre-owned <em>cars</em>,<br />honestly priced.</h1>
+        <p>All types of cars, bought and sold. Every vehicle verified, papers clear, ready to drive home. Park &amp; sale facility available.</p>
+        <div class="hero-cta">
+          <a class="btn btn-brass" href="#inventory">Browse Cars</a>
+          <button class="btn btn-wa" data-wa>Enquire on WhatsApp</button>
+        </div>
+        <div class="stats">
+          <div class="stat"><b id="statCount">—</b><span>Cars in stock</span></div>
+          <div class="stat"><b>All</b><span>Brands accepted</span></div>
+          <div class="stat"><b>100%</b><span>Verified papers</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Inventory -->
+    <section class="section" id="inventory">
+      <div class="wrap">
+        <div class="eyebrow">Available Cars</div>
+        <h2 class="serif" style="font-size:40px;margin-bottom:26px">Find your next car</h2>
+
+        <div class="filters">
+          <div class="field span2"><label>Search</label><input class="input" id="fSearch" placeholder="Model, brand, colour, reg no…" /></div>
+          <div class="field"><label>Brand</label><select class="select" id="fBrand"></select></div>
+          <div class="field"><label>Model</label><select class="select" id="fModel"></select></div>
+          <div class="field"><label>Fuel</label><select class="select" id="fFuel"></select></div>
+          <div class="field"><label>Year</label><select class="select" id="fYear"></select></div>
+          <div class="field"><label>Budget</label><select class="select" id="fBudget"></select></div>
+          <div class="field"><label>KMs driven</label><select class="select" id="fKm"></select></div>
+          <div class="field"><label>Sort by</label>
+            <select class="select" id="fSort">
+              <option value="new">Newest first</option>
+              <option value="low">Price: low to high</option>
+              <option value="high">Price: high to low</option>
+              <option value="km">KMs: low to high</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="results-head">
+          <span class="count" id="resultCount">0 cars available</span>
+          <button class="btn btn-ghost" id="resetBtn">Reset filters</button>
+        </div>
+
+        <div class="marquee" aria-hidden="true"><div class="marquee-track" id="marquee"></div></div>
+
+        <div class="grid" id="grid"></div>
+      </div>
+    </section>
+
+    <div class="wrap"><div class="hair"></div></div>
+
+    <!-- Why us -->
+    <section class="section" id="why">
+      <div class="wrap">
+        <div class="eyebrow">Why Sri Annamayya</div>
+        <h2 class="serif" style="font-size:40px;margin-bottom:26px">Buying made simple &amp; safe</h2>
+        <div class="cards3" id="whyGrid"></div>
+      </div>
+    </section>
+
+    <!-- Sell your car -->
+    <section class="section" id="sell">
+      <div class="wrap">
+        <div class="sell-card reveal">
+          <div class="sell-left">
+            <div class="eyebrow">Sell / Exchange</div>
+            <h2 class="serif">Want to sell your car?</h2>
+            <p>We buy all makes and models. Share a few details and our team will get back to you on WhatsApp with a fair quote — quick and hassle-free.</p>
+            <ul class="sell-points">
+              <li>All brands &amp; models accepted</li>
+              <li>Instant response on WhatsApp</li>
+              <li>Free valuation &amp; paperwork help</li>
+              <li>Park &amp; sale facility available</li>
+            </ul>
+          </div>
+          <div id="sellSlot">
+            <form class="sell-form" id="sellForm">
+              <div class="field"><label>Your name *</label><input class="input" name="name" required placeholder="Full name" /></div>
+              <div class="field"><label>Phone *</label><input class="input" name="phone" required type="tel" placeholder="Mobile number" /></div>
+              <div class="field full"><label>Car (make &amp; model) *</label><input class="input" name="car" required placeholder="e.g. Maruti Suzuki Swift VXi" /></div>
+              <div class="field"><label>Year</label><input class="input" name="year" type="number" placeholder="2018" /></div>
+              <div class="field"><label>KMs driven</label><input class="input" name="km" type="number" placeholder="45000" /></div>
+              <div class="field full"><label>Expected price (₹)</label><input class="input" name="price" type="number" placeholder="Optional — we can suggest" /></div>
+              <div class="field full"><label>Notes</label><textarea name="notes" rows="2" placeholder="Condition, ownership, insurance, anything else…"></textarea></div>
+              <button class="btn btn-brass btn-block full" type="submit">Get a Quote on WhatsApp</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section" id="about">
+      <div class="wrap">
+        <div class="eyebrow">About Sri Annamayya Cars</div>
+        <h2 class="serif" style="font-size:40px;margin-bottom:16px">Your trusted local car dealer in Madanapalle</h2>
+        <p style="color:var(--mute);max-width:720px">
+          Sri Annamayya Cars deals in all types of pre-owned cars — buying and selling. Located opposite Royal Arabia
+          Restaurant on the New By-Pass Punganur Road, Madanapalle, we offer a park &amp; sale facility and a friendly,
+          no-pressure buying experience. Come visit the yard, or message us and we'll help you find the right car.
+        </p>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section" id="contact">
+      <div class="wrap">
+        <div class="eyebrow">Visit / Contact</div>
+        <h2 class="serif" style="font-size:40px;margin-bottom:26px">Come see the cars</h2>
+        <div class="contact-grid">
+          <div>
+            <div class="cline"><b>Showroom</b><span>Opp. Royal Arabia Restaurant, New By-Pass Punganur Road, Madanapalle – 517325, Annamayya Dist, A.P.</span></div>
+            <div class="cline" style="border-bottom:none;padding-bottom:4px"><b>Call / WhatsApp</b></div>
+            <div class="team" id="teamList"></div>
+            <div class="cline"><b>Office</b><span>78938 46323</span></div>
+            <div class="cline"><b>Hours</b><span>Mon – Sun · 9:00 AM – 8:30 PM</span></div>
+            <div style="display:flex;gap:10px;margin-top:20px;flex-wrap:wrap">
+              <button class="btn btn-wa" data-wa>WhatsApp Us</button>
+              <a class="btn btn-line" href="https://maps.app.goo.gl/zWacxZGHHqz75NKr8" target="_blank" rel="noopener">Directions</a>
+            </div>
+          </div>
+          <div style="border-radius:14px;overflow:hidden;border:1px solid var(--line);min-height:260px">
+            <iframe title="Sri Annamayya Cars location" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+              style="width:100%;height:100%;min-height:260px;border:0;filter:grayscale(.3) invert(.9) hue-rotate(180deg)"
+              src="https://www.google.com/maps?q=Sri+Annamayya+Cars,+NH+42,+Basinikonda+Rural,+Andhra+Pradesh+517326&output=embed"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Showroom -->
+    <section class="section" id="showroom">
+      <div class="wrap">
+        <div class="eyebrow">Our Showroom</div>
+        <h2 class="serif" style="font-size:40px;margin-bottom:26px">Visit us at Madanapalle</h2>
+        <div class="gallery-grid">
+          <figure class="gal reveal">
+            <img src="assets/shop1.jpg" alt="Sri Annamayya Cars showroom signboard" loading="lazy" />
+            <figcaption>Sri Annamayya Cars · All types of cars — selling &amp; buying</figcaption>
+          </figure>
+          <figure class="gal reveal">
+            <img src="assets/shop2.jpg" alt="Sri Annamayya Cars yard with cars parked" loading="lazy" />
+            <figcaption>Park &amp; sale facility · New By-Pass Punganur Road</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="wrap">
+        <div class="foot-grid">
+          <div class="foot-col">
+            <img src="assets/logo.png" alt="Sri Annamayya Cars" style="height:66px;margin-bottom:14px" />
+            <p style="color:var(--mute);font-size:14px">Your trusted local dealer for quality pre-owned cars in Madanapalle. All types of cars bought and sold — honest pricing, verified papers, park &amp; sale facility.</p>
+            <div class="foot-social" id="footSocial"></div>
+          </div>
+          <div class="foot-col">
+            <h4>Explore</h4>
+            <a href="#inventory">Available Cars</a>
+            <a href="#why">Why Choose Us</a>
+            <a href="#showroom">Our Showroom</a>
+            <a href="#contact">Visit / Contact</a>
+          </div>
+          <div class="foot-col">
+            <h4>Our Services</h4>
+            <span class="li">All brands — buy &amp; sell</span>
+            <span class="li">Old car exchange</span>
+            <span class="li">Bank loan assistance</span>
+            <span class="li">Park &amp; sale facility</span>
+            <span class="li">Verified &amp; clear papers</span>
+          </div>
+          <div class="foot-col">
+            <h4>Reach Us</h4>
+            <span class="li">Opp. Royal Arabia Restaurant, New By-Pass Punganur Road, Madanapalle – 517325, Annamayya Dist, A.P.</span>
+            <a href="tel:+919441775216">Eswar · 94417 75216</a>
+            <a href="tel:+919440826161">Malli · 94408 26161</a>
+            <a href="tel:+919398104188">Pavan · 93981 04188</a>
+            <span class="li">Office · 78938 46323</span>
+            <span class="li">Open daily · 9:00 AM – 8:30 PM</span>
+          </div>
+        </div>
+        <div class="foot-bottom">
+          <span>© <span id="year"></span> Sri Annamayya Cars. All Rights Reserved.</span>
+          <span>All types of cars — selling &amp; buying · Madanapalle</span>
+        </div>
+      </div>
+    </footer>
+
+    <button class="float" data-wa aria-label="WhatsApp"></button>
+  </div>
+
+  <!-- Modal mount points -->
+  <div id="modalRoot"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
