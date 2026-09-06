@@ -4,6 +4,7 @@ import cors from "cors";
 import path from "path";
 import { fileURLToPath } from "url";
 import { connectDB } from "./db.js";
+import Car from "./models/Car.js";
 import authRoutes from "./routes/auth.js";
 import carRoutes from "./routes/cars.js";
 import { UPLOAD_DIR } from "./utils/images.js";
@@ -45,7 +46,11 @@ app.use("/api/cars", carRoutes);
 const PORT = process.env.PORT || 5000;
 
 connectDB(process.env.MONGODB_URI)
-  .then(() => {
+  .then(async () => {
+    // MongoDB creates collections on first write; this guarantees the schema's
+    // indexes (incl. the search text index) exist on a fresh database too.
+    await Car.syncIndexes();
+    console.log("✅ Car collection + indexes ready");
     app.listen(PORT, () => console.log(`🚗 API running → http://localhost:${PORT}`));
   })
   .catch((err) => {
