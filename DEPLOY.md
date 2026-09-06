@@ -25,6 +25,15 @@ The two Next apps proxy `/api/*` and `/uploads/*` to the backend (see
    `mongodb+srv://USER:PASS@cluster0.xxxx.mongodb.net/annamayyacars?retryWrites=true&w=majority`
    Keep the `/annamayyacars` database name in the path. This is your `MONGODB_URI`.
 
+> **Using a self-hosted / Coolify MongoDB instead of Atlas?**
+> The connection string looks like
+> `mongodb://root:PASSWORD@HOST:PORT/annamayyacars?directConnection=true&authSource=admin`
+> — add the `/annamayyacars` **database name** in the path (so data lands in a
+> named DB, not `test`) and, when logging in as the `root` user, keep
+> `authSource=admin`. The backend auto-creates the `cars` collection and its
+> indexes on first boot (`Car.syncIndexes()`), so nothing needs to be created by
+> hand. **Set this only in Coolify's env vars — never commit it to git.**
+
 ## 2. DNS (at your domain registrar for sriannamayyacars.in)
 
 Point these at your VPS public IP (`YOUR_VPS_IP`):
@@ -72,8 +81,11 @@ Dockerfile**. Coolify issues free Let's Encrypt SSL automatically once DNS is li
   BACKEND_URL=https://api.sriannamayyacars.in
   NEXT_PUBLIC_PHONE=919441775216
   NEXT_PUBLIC_PHONE_DISPLAY=94417 75216
+  NEXT_PUBLIC_ADMIN_URL=https://admin.sriannamayyacars.in
   ```
-  (`NEXT_PUBLIC_*` are build-time — in Coolify tick "Build Variable" for those two.)
+  (`NEXT_PUBLIC_*` are build-time — in Coolify tick "Build Variable" for
+  `NEXT_PUBLIC_PHONE`, `NEXT_PUBLIC_PHONE_DISPLAY` and `NEXT_PUBLIC_ADMIN_URL`.
+  The last one powers the discreet **Owner Login** link in the site footer.)
 - Deploy.
 
 ### 3c. Admin panel (`admin`)

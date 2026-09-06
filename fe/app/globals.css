@@ -384,6 +384,8 @@ footer { border-top: 1px solid var(--line); padding: 60px 0 30px; background: li
 .foot-social svg { width: 18px; height: 18px; }
 .foot-bottom { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-top: 44px; padding-top: 22px; border-top: 1px solid var(--line); font-family: "IBM Plex Mono", monospace; font-size: 10px; letter-spacing: 0.1em; color: var(--mute); }
 .foot-bottom a { color: var(--brass-lt); }
+.foot-bottom .owner-login { margin-left: auto; color: var(--mute); text-decoration: none; opacity: 0.8; transition: color 0.2s, opacity 0.2s; }
+.foot-bottom .owner-login:hover { color: var(--brass-lt); opacity: 1; }
 
 /* ─── Floating WhatsApp ───────────────────────────────── */
 .float { position: fixed; bottom: 22px; right: 22px; z-index: 80; width: 58px; height: 58px; border-radius: 999px; background: var(--wa); display: grid; place-items: center; box-shadow: 0 12px 30px rgba(37, 211, 102, 0.45); animation: bob 2.6s ease-in-out infinite; }

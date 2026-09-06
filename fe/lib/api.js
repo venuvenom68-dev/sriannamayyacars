@@ -4,6 +4,11 @@ export const API = process.env.NEXT_PUBLIC_API_URL || "";
 export const PHONE = process.env.NEXT_PUBLIC_PHONE || "919441775216";
 export const PHONE_DISPLAY = process.env.NEXT_PUBLIC_PHONE_DISPLAY || "94417 75216";
 
+// Owner dashboard (deployed as its own app). Override with NEXT_PUBLIC_ADMIN_URL
+// in production (mark it a Build Variable in Coolify since NEXT_PUBLIC_* is
+// inlined at build time).
+export const ADMIN_URL = process.env.NEXT_PUBLIC_ADMIN_URL || "https://admin.sriannamayyacars.in";
+
 export const rupee = (n) => "₹" + Number(n || 0).toLocaleString("en-IN");
 export const lakh = (n) => (Number(n || 0) / 100000).toFixed(2).replace(/\.00$/, "") + " L";
 export const waLink = (msg) => `https://wa.me/${PHONE}?text=${encodeURIComponent(msg)}`;
